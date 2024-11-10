@@ -14,8 +14,8 @@ best_buy = store.Store(product_list)
 def show_products(store):
     products = store.get_all_products()
     print("-------------------------")
-    for product in products:
-        product.show()
+    for index,product in enumerate(products,1):
+        print(f"{index}. {product.name} - ${product.price} - Available quantity: {product.quantity}")
     print("---------------------")
 
 def make_order(store):
