@@ -29,8 +29,10 @@ def make_order(store):
         quantity = input("What amount do you want?")
         if product_nos == "" and quantity == "":
            break
-        #ordered_list.append((products[int(product_nos)],int(quantity)))
-        print("Product added to list!")
+        if  int(product_nos) >=1 and int(product_nos) <=3:
+            print("Product added to list!")
+        else :
+            print("Error adding product")
 
 
 def start(store):
