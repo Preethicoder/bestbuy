@@ -21,16 +21,16 @@ def show_products(store):
 def make_order(store):
     products = store.get_all_products()
     ordered_list = []
-
+    show_products(store)
+    print("When you want to finish order, enter empty text.")
     while True:
-        show_products(store)
-        print("When you want to finish order, enter empty text.")
+
         product_nos = input("Which product # do you want?")
         quantity = input("What amount do you want?")
-        print("When you want to finish order, enter empty text.")
         if product_nos == "" and quantity == "":
            break
-        ordered_list.append((products[int(product_nos)],int(quantity)))
+        #ordered_list.append((products[int(product_nos)],int(quantity)))
+        print("Product added to list!")
 
 
 def start(store):
