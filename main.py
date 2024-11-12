@@ -29,11 +29,14 @@ def make_order(store):
         quantity = input("What amount do you want?")
         if product_nos == "" and quantity == "":
            break
-        if  int(product_nos) >=1 and int(product_nos) <=3:
+        if  int(product_nos) >=1 and int(product_nos )<=3:
             print("Product added to list!")
+            ordered_list.append((product_list[int(product_nos) - 1],int(quantity)))
         else :
             print("Error adding product")
-
+    total_price = store.order(ordered_list)
+    print("*****************")
+    print(f"Order made! Total payment:${total_price} ")
 
 def start(store):
     """Main function to start the user interface."""
